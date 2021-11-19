@@ -1,0 +1,74 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.menuDiv {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 20px auto;
+  width: 70%;
+
+  .menu {
+    margin: 40px 20px 40px 50px;
+    text-align: center;
+    width: 25%;
+
+    img {
+      border-radius: 50%;
+      background-color: rgb(32, 56, 39);
+      width: 200px;
+      &:hover {
+        padding: 10px;
+      }
+    }
+    .plusMinusButtons {
+      display: flex;
+      text-align: center;
+      .para {
+        overflow-y: hidden;
+        word-break: keep-all;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 200px;
+        height: 200px;
+        color: rgb(51, 40, 40);
+        background-color: rgb(192, 192, 192);
+        border: 1px black solid;
+        box-shadow: 0px 0px 5px 5px rgb(85, 68, 68);
+        border-radius: 50%;
+        p {
+          margin: 10px;
+        }
+      }
+      .buttonMinusPlus {
+        display: block;
+
+        // background-color: red;
+        .btn {
+          background-color: green;
+          color: white;
+          height: fit-content;
+
+          padding: 10px;
+          margin: 100px 0px 9px 10px;
+          border-radius: 50%;
+        }
+        .btn-checkout {
+          padding: 5px;
+          background-color: green;
+          color: rgb(0, 0, 0);
+        }
+      }
+    }
+  }
+  h1 {
+    text-align: center;
+    margin-top: 20px;
+  }
+}
+// .menuDesc {
+// }

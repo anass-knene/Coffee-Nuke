@@ -1,0 +1,17 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.footer {
+  background-color: rgba(0, 0, 0, 0.794);
+  display: flex;
+  justify-content: center;
+  ul {
+    color: white;
+    li a {
+      color: red;
+      text-align: center;
+    }
+  }
+}

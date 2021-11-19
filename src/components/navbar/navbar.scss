@@ -1,0 +1,46 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.navbar {
+  position: fixed;
+  display: flex;
+  z-index: 2;
+  justify-content: space-between;
+  width: 100%;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 5px 5px 5px 5px rgb(22, 22, 22);
+}
+ul {
+  display: flex;
+  margin: 20px;
+  button {
+    font-size: 1.4rem;
+    padding: 10px 15px;
+    margin: 6px;
+    border-radius: 20px;
+    background-color: white;
+    &:hover {
+      background-color: rgba(112, 185, 53, 0.918);
+    }
+  }
+  .join {
+    background-color: black;
+    color: white;
+  }
+}
+li {
+  margin: 20px;
+  font-weight: bold;
+  font-size: 1.2rem;
+  :hover {
+    color: green;
+  }
+  a {
+    text-decoration: none;
+    color: black;
+  }
+}
