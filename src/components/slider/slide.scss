@@ -1,4 +1,5 @@
 .swiper-slide {
+  height: 635px;
   z-index: -1;
   text-align: center;
   font-size: 18px;
@@ -25,8 +26,7 @@
   img {
     display: block;
     width: 35%;
-    height: 100%;
-    object-fit: cover;
+    height: 90%;
   }
   button {
     padding: 20px 80px;

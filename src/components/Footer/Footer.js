@@ -13,7 +13,7 @@ import {
 
 export default function Footer() {
   return (
-    <div className="footer">
+    <div className="footer ">
       <ul>
         <li>
           <Link to="/about">About</Link>

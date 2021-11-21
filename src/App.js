@@ -7,10 +7,9 @@ import Slide from "./components/slider/Slide";
 
 import Footer from "./components/Footer/Footer";
 function App() {
-  console.log(data);
   return (
     <div className="App">
-      <div style={{ paddingBottom: "120px" }}>
+      <div style={{ paddingBottom: "20px", marginBottom: "90px" }}>
         <Navbar />
       </div>
 

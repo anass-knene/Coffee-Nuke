@@ -1,6 +1,6 @@
 export const data = [
   {
-    isFleepd: false,
+    isFlipped: false,
     counter: 0,
     title: "Black",
     description:
@@ -11,7 +11,7 @@ export const data = [
       "https://globalassets.starbucks.com/assets/0279f9c5fa5941d2a65dd183d7a0b386.jpg?impolicy=1by1_wide_topcrop_630",
   },
   {
-    isFleepd: false,
+    isFlipped: false,
     counter: 0,
     title: "Latte",
     description:
@@ -22,7 +22,7 @@ export const data = [
       "https://globalassets.starbucks.com/assets/b635f407bbcd49e7b8dd9119ce33f76e.jpg?impolicy=1by1_wide_topcrop_630",
   },
   {
-    isFleepd: false,
+    isFlipped: false,
     counter: 0,
     title: "Cappuccino",
     description:
@@ -33,7 +33,7 @@ export const data = [
       "data:image/jpeg;base64,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",
   },
   {
-    isFleepd: false,
+    isFlipped: false,
     counter: 0,
     title: "Americano",
     description:
@@ -44,7 +44,7 @@ export const data = [
       "https://globalassets.starbucks.com/assets/f12bc8af498d45ed92c5d6f1dac64062.jpg?impolicy=1by1_wide_topcrop_630",
   },
   {
-    isFleepd: false,
+    isFlipped: false,
     counter: 0,
     title: "Espresso",
     description:
@@ -55,7 +55,7 @@ export const data = [
       "https://globalassets.starbucks.com/assets/ec519dd5642c41629194192cce582135.jpg?impolicy=1by1_wide_topcrop_630",
   },
   {
-    isFleepd: false,
+    isFlipped: false,
     counter: 0,
     title: "Doppio",
     description:
@@ -66,7 +66,7 @@ export const data = [
       "https://globalassets.starbucks.com/assets/e9330b18ae524e69bdcbe97460d6f5bb.jpg?impolicy=1by1_wide_topcrop_630",
   },
   {
-    isFleepd: false,
+    isFlipped: false,
     counter: 0,
     title: "Cortado",
     description:
@@ -77,7 +77,7 @@ export const data = [
       "https://www.digitalassets.starbucks.eu/sites/starbucks-medialibrary/files/assets/28967bf9315bb04b5ef8525e04bc5659.jpg",
   },
   {
-    isFleepd: false,
+    isFlipped: false,
     counter: 0,
     title: "Red Eye",
     description:
@@ -88,7 +88,7 @@ export const data = [
       "https://www.starbucks.co.th/stb-media/2020/08/8.Americano1080-600x600.png",
   },
   {
-    isFleepd: false,
+    isFlipped: false,
     counter: 0,
     title: "Galão",
     description:
@@ -99,7 +99,7 @@ export const data = [
       "https://globalassets.starbucks.com/assets/ca220a3088204bafafb4b61102f40d61.jpg?impolicy=1by1_wide_topcrop_630",
   },
   {
-    isFleepd: false,
+    isFlipped: false,
     counter: 0,
     title: "Lungo",
     description:
@@ -110,7 +110,7 @@ export const data = [
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQOMpbxRJGFSzrnioVyo2vQFN6G4QNCbAWXqXUizWgCiM6vUn8hR_fox2kh7rzBcHGnWnw&usqp=CAU",
   },
   {
-    isFleepd: false,
+    isFlipped: false,
     counter: 0,
     title: "Macchiato",
     description:
@@ -121,7 +121,7 @@ export const data = [
       "https://globalassets.starbucks.com/assets/79bfec31ab7447f691b3c48f39cc7661.jpg?impolicy=1by1_wide_topcrop_630",
   },
   {
-    isFleepd: false,
+    isFlipped: false,
     counter: 0,
     title: "Mocha",
     description:
@@ -132,7 +132,7 @@ export const data = [
       "https://globalassets.starbucks.com/assets/f4ec500b34624242b15c2d29e53f3c48.jpg?impolicy=1by1_wide_topcrop_630",
   },
   {
-    isFleepd: false,
+    isFlipped: false,
     counter: 0,
     title: "Ristretto",
     description:
@@ -143,7 +143,7 @@ export const data = [
       "https://globalassets.starbucks.com/assets/58db701349cb48738069e8c912e2b3ac.jpg?impolicy=1by1_wide_topcrop_630",
   },
   {
-    isFleepd: false,
+    isFlipped: false,
     counter: 0,
     title: "Flat White",
     description:
@@ -154,7 +154,7 @@ export const data = [
       "https://globalassets.starbucks.com/assets/fedee22e49724cd09fbcc7ee2e567377.jpg?impolicy=1by1_wide_topcrop_630",
   },
   {
-    isFleepd: false,
+    isFlipped: false,
     counter: 0,
     title: "Affogato",
     description:
@@ -165,7 +165,7 @@ export const data = [
       "https://globalassets.starbucks.com/assets/fedee22e49724cd09fbcc7ee2e567377.jpg?impolicy=1by1_wide_topcrop_630",
   },
   {
-    isFleepd: false,
+    isFlipped: false,
     counter: 0,
     title: "Café au Lait",
     description:
@@ -176,7 +176,7 @@ export const data = [
       "https://globalassets.starbucks.com/assets/d668acbc691b47249548a3eeac449916.jpg?impolicy=1by1_wide_topcrop_630",
   },
   {
-    isFleepd: false,
+    isFlipped: false,
     counter: 0,
     title: "Irish",
     description:
@@ -187,7 +187,7 @@ export const data = [
       "https://globalassets.starbucks.com/assets/3abfc4b26c144afd9dd4eec001f0f252.jpg?impolicy=1by1_wide_topcrop_630",
   },
   {
-    isFleepd: false,
+    isFlipped: false,
     counter: 0,
     title: "Guayoyo",
     description:
@@ -198,7 +198,7 @@ export const data = [
       "https://www.starbucks.co.th/stb-media/2020/08/18.PourOver_Hot1080-600x600.png",
   },
   {
-    isFleepd: false,
+    isFlipped: false,
     counter: 0,
     title: "Cortadito",
     description:
@@ -209,7 +209,7 @@ export const data = [
       "https://www.digitalassets.starbucks.eu/sites/starbucks-medialibrary/files/assets/28967bf9315bb04b5ef8525e04bc5659.jpg",
   },
   {
-    isFleepd: false,
+    isFlipped: false,
     counter: 0,
     title: "Aguapanela",
     description:
@@ -220,7 +220,7 @@ export const data = [
       "https://www.starbucks.co.nz/media/New23.English-BF1080-600x600_tcm100-68974_w1024_n.png",
   },
   {
-    isFleepd: false,
+    isFlipped: false,
     counter: 0,
     title: "Mocha ",
     description:
