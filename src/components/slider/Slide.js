@@ -13,19 +13,19 @@ import "./slide.scss";
 SwiperCore.use([Autoplay, Pagination, Navigation]);
 export default function Slide() {
   return (
-    <div className="slide">
+    <div className="Slide">
       <Swiper
-      // spaceBetween={30}
-      // centeredSlides={true}
-      // autoplay={{
-      //   delay: 2500,
-      //   disableOnInteraction: false,
-      // }}
-      // pagination={{
-      //   clickable: true,
-      // }}
-      // navigation={true}
-      // className="mySwiper"
+        spaceBetween={30}
+        centeredSlides={true}
+        autoplay={{
+          delay: 2500,
+          disableOnInteraction: false,
+        }}
+        pagination={{
+          clickable: true,
+        }}
+        navigation={false}
+        className="mySwiper"
       >
         <SwiperSlide>
           <img src={spoon} alt="img" />

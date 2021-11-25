@@ -1,9 +1,9 @@
 import React from "react";
-import { Link } from "react-router-dom";
+
 import "./footer.scss";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-// import { faInstagram } from "@fortawesome/free-solid-svg-icons";
+
 import {
   faInstagram,
   faFacebook,
@@ -13,28 +13,32 @@ import {
 
 export default function Footer() {
   return (
-    <div className="footer ">
+    <div className="Footer ">
       <ul>
         <li>
-          <Link to="/about">About</Link>
+          <a
+            href=" https://www.instagram.com/nukecoffee_id/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <FontAwesomeIcon icon={faInstagram} />
+          </a>
         </li>
         <li>
-          <Link to="/contact">Contact</Link>
+          <a
+            href="https://www.facebook.com/NUKEIT.COFFEE/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            {<FontAwesomeIcon icon={faFacebook} />}
+          </a>
         </li>
         <li>
-          <Link to="/">Home</Link>
+          <a href="/#">{<FontAwesomeIcon icon={faTwitter} />}</a>
         </li>
         <li>
-          <Link to="/home">tel</Link>
+          <a href="/#">{<FontAwesomeIcon icon={faTiktok} />}</a>
         </li>
-      </ul>
-      <ul>
-        <li>
-          <FontAwesomeIcon icon={faInstagram} />
-        </li>
-        <li>{<FontAwesomeIcon icon={faFacebook} />}</li>
-        <li>{<FontAwesomeIcon icon={faTwitter} />}</li>
-        <li>{<FontAwesomeIcon icon={faTiktok} />}</li>
       </ul>
     </div>
   );

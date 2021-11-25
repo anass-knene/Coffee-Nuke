@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React, { useContext, useEffect } from "react";
+
 import {
   faMinus,
   faPlus,
@@ -7,14 +8,14 @@ import {
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import ReactCardFlip from "react-card-flip";
 
-import { data } from "../data";
 import "./menu.scss";
+import { MyContext } from "../Context/context";
 export default function Menu() {
-  // const [isFlipped, setIsFlipped] = useState(false);
-  const [countItem, setCountItem] = useState(0);
-  const [products, setProducts] = useState(data);
+  let timeOut;
+  const { cart, setCart, products, setProducts, setClassesNameIcon } =
+    useContext(MyContext);
+  // ---------------------- is flipped function start here -----------------------------------
   const handleClick = (id) => {
-    // setIsFlipped((value) => !value);
     console.log(id);
     const updateProducts = products.map((currentValue) => {
       if (id === currentValue.id) {
@@ -24,149 +25,120 @@ export default function Menu() {
     });
     setProducts(updateProducts);
   };
-  let addItems = (id) => {
-    let updateCounter = products.map((value) => {
-      if (id === value.id) {
-        return value.counter++;
-      }
-      return value;
-    });
-    setCountItem(updateCounter);
-  };
-  let removeItems = (id) => {
-    let decreaseCounter = products.map((value) => {
-      if (id === value.id) {
-        if (value.counter === 0) {
-          return value.counter === 0;
-        }
-        return value.counter--;
-      }
+  // ---------------------- is flipped function end here -----------------------------------
 
-      return value;
-    });
-    setCountItem(decreaseCounter);
-  };
+  // ------------------add item (plus) start here ------------------------------------
+  let addItems = /* async */ (product) => {
+    let updatedProducts = products.map((productItem) =>
+      productItem.id === product.id
+        ? { ...product, counter: productItem.counter + 1 }
+        : productItem
+    );
 
-  return (
-    <div className="menuDiv">
-      {products.map((item) => {
-        const { title, id, image, description, counter } = item;
-        return (
-          <div key={id} className="menu">
-            <div className="plusMinusButtons">
-              <ReactCardFlip
-                isFlipped={item.isFlipped}
-                flipDirection="horizontal"
-              >
-                <img
-                  src={image}
-                  onClick={() => handleClick(id)}
-                  alt="img"
-                  className="active"
-                />
-                <div className="para">
-                  <p onClick={() => handleClick(id)}>{description}</p>
-                </div>
-              </ReactCardFlip>
-              <div className="buttonMinusPlus">
-                <button key={id} className="btn" onClick={() => addItems(id)}>
-                  <FontAwesomeIcon icon={faPlus} />
-                </button>
-                <button className="btn" onClick={() => removeItems(id)}>
-                  <FontAwesomeIcon icon={faMinus} />
-                </button>
-                <p>{counter}</p>
-                <button className="btn-checkout">
-                  Add to <FontAwesomeIcon icon={faShoppingCart} />
-                </button>
-              </div>
-            </div>
-            <div style={{ width: "50%" }}>
-              <h1>{title}</h1>
-            </div>
-          </div>
-        );
-      })}
-    </div>
-  );
-}
+    /* await */ setProducts(updatedProducts);
 
-/* 
-import React, { useState } from "react";
-import {
-  faMinus,
-  faPlus,
-  faShoppingCart,
-} from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import ReactCardFlip from "react-card-flip";
-import { NavLink } from "react-router-dom";
-import { data } from "../data";
-import "./menu.scss";
-export default function Menu() {
-  // const [isFlipped, setIsFlipped] = useState(false);
-  const [countItem, setCountItem] = useState(0);
-  const [products, setProducts] = useState(data);
-  const handleClick = (id) => {
-    // setIsFlipped((value) => !value);
-    console.log(id);
-    const updateProducts = products.map((currentValue) => {
-      if (id === currentValue.id) {
-        currentValue.isFleepd = !currentValue.isFleepd;
-      }
-      return currentValue;
-    });
-    setProducts(updateProducts);
-    // products.map
+    //  add item finish -------------------------------------
   };
-  let addItems = () => {
-    setCountItem(countItem + 1);
+  // ------------------remove item (minus) start here ------------------------------------
+  let removeItems = /* async */ (product) => {
+    let updatedProducts = products.map((productItem) =>
+      productItem.id === product.id
+        ? {
+            ...product,
+            counter:
+              productItem.counter === 0
+                ? (productItem.counter = 0)
+                : productItem.counter - 1,
+          }
+        : productItem
+    );
+
+    /* await */ setProducts(updatedProducts);
   };
-  let removeItems = () => {
-    if (countItem === 0) {
-      setCountItem(0);
+  // ------------------remove item (minus) end here ------------------------------------
+
+  // ------------------add to basket start here ------------------------------------
+  let addBasket = /* async */ (product) => {
+    let itemInProduct = products.find(
+      (productItem) => productItem.id === product.id
+    );
+
+    //1 check the cart wither the product is there
+    let findProduct = cart.find((cartItem) => cartItem.id === product.id);
+    //2 if product is already in cart : replace item with updated quantity
+
+    if (findProduct) {
+      let updatedCart = cart.map((item) =>
+        item.id !== product.id ? item : itemInProduct
+      );
+      // setClassesNameIcon("");
+      /* await */ setCart(updatedCart);
+      /* await */ setClassesNameIcon("jello-horizontal");
+      timeOut = setTimeout(() => {
+        setClassesNameIcon("");
+      }, 1000);
+
+      // await setCountItem(counter);
     } else {
-      setCountItem(countItem - 1);
+      setCart([...cart, itemInProduct]);
+      // setClassesNameIcon("jello-horizontal");
     }
   };
+  useEffect(() => {
+    return () => {
+      clearTimeout(timeOut);
+    };
+  }, []);
 
+  // ------------------add to basket end here ------------------------------------
   return (
-    <div className="menuDiv">
-      {products.map((item) => {
-        console.log(data);
-        const { title, id, image, description } = item;
+    <div className="MenuDiv">
+      {products.map((product) => {
+        const { title, id, image, description, counter, price } = product;
         return (
-          <div key={id} className="menu">
-            <div className="plusMinusButtons">
+          <div key={id} className="Menu">
+            <div className="PlusMinusButtons">
               <ReactCardFlip
-                isFlipped={item.isFleepd}
+                isFlipped={product.isFlipped}
                 flipDirection="horizontal"
               >
                 <img
                   src={image}
                   onClick={() => handleClick(id)}
                   alt="img"
-                  className="active"
+                  className="Active"
                 />
-                <div className="para">
+                <div className="Para">
                   <p onClick={() => handleClick(id)}>{description}</p>
                 </div>
               </ReactCardFlip>
-              <div className="buttonMinusPlus">
-                <button className="btn" onClick={addItems}>
-                  <FontAwesomeIcon icon={faPlus} />
-                </button>
-                <button className="btn" onClick={removeItems}>
+              <div className="ButtonMinusPlus">
+                <button className="Btn" onClick={() => removeItems(product)}>
                   <FontAwesomeIcon icon={faMinus} />
                 </button>
-                <p>{countItem}</p>
-                <button /* onClick={}  className="btn-checkout">
-                  Add to <FontAwesomeIcon icon={faShoppingCart} />
+                <button
+                  key={id}
+                  className="Btn"
+                  onClick={() => addItems(product)}
+                >
+                  <FontAwesomeIcon icon={faPlus} />
                 </button>
+
+                <p>{counter}</p>
               </div>
             </div>
-            <div style={{ width: "50%" }}>
-              <h1>{title}</h1>
+            <div className="Add-Item">
+              <h2>{title}</h2>
+              <h4>{price} $</h4>
+              <button
+                className="Btn-checkout"
+                onClick={() => {
+                  addBasket(product);
+                }}
+              >
+                Add to
+                <FontAwesomeIcon icon={faShoppingCart} />
+              </button>
             </div>
           </div>
         );
@@ -174,4 +146,3 @@ export default function Menu() {
     </div>
   );
 }
-*/

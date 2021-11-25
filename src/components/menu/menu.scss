@@ -4,14 +4,14 @@
   box-sizing: border-box;
   font-family: Arial, Helvetica, sans-serif;
 }
-.menuDiv {
+.MenuDiv {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  margin: 20px auto;
   width: 70%;
 
-  .menu {
+  margin: 20px auto;
+  .Menu {
     margin: 40px 20px 40px 50px;
     text-align: center;
     width: 25%;
@@ -19,15 +19,17 @@
     img {
       border-radius: 50%;
       background-color: rgb(32, 56, 39);
-      width: 200px;
+      width: 190px;
       &:hover {
         padding: 10px;
+        cursor: pointer;
       }
     }
-    .plusMinusButtons {
+    .PlusMinusButtons {
       display: flex;
       text-align: center;
-      .para {
+
+      .Para {
         overflow-y: hidden;
         word-break: keep-all;
         display: flex;
@@ -42,33 +44,51 @@
         border-radius: 50%;
         p {
           margin: 10px;
+          cursor: pointer;
         }
       }
-      .buttonMinusPlus {
-        display: block;
+      .ButtonMinusPlus {
+        height: fit-content;
 
-        // background-color: red;
-        .btn {
+        margin-top: 36%;
+        .Btn {
+          cursor: pointer;
           background-color: green;
           color: white;
           height: fit-content;
-
           padding: 10px;
-          margin: 100px 0px 9px 10px;
+          margin: 0px 4px 0px 2px;
           border-radius: 50%;
-        }
-        .btn-checkout {
-          padding: 5px;
-          background-color: green;
-          color: rgb(0, 0, 0);
         }
       }
     }
-  }
-  h1 {
-    text-align: center;
-    margin-top: 20px;
+    .Add-Item {
+      display: flex;
+      width: 300px;
+      background-color: rgba(0, 0, 0, 0.918);
+      margin-top: 5px;
+      border-radius: 10px;
+      justify-content: space-between;
+      h4 {
+        text-align: start;
+        color: white;
+        margin-top: 20px;
+      }
+      .Btn-checkout {
+        cursor: pointer;
+        padding: 4px;
+        background-color: green;
+        color: rgb(0, 0, 0);
+      }
+      h2 {
+        text-align: start;
+        margin: 20px;
+        color: white;
+      }
+    }
   }
 }
-// .menuDesc {
-// }
+.menu img {
+}
+.menu img :hover {
+}
