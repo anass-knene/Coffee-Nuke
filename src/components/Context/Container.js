@@ -4,7 +4,7 @@ import { MyContext } from "./context";
 
 export default function Container(props) {
   const [cart, setCart] = useState([]);
-  const [countItem, setCountItem] = useState();
+  const [countItem, setCountItem] = useState(0);
   const [products, setProducts] = useState(data);
   const [classesNameIcon, setClassesNameIcon] = useState("");
 
