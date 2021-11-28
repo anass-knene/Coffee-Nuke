@@ -1,13 +1,14 @@
 import React, { useContext } from "react";
-import { Link } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 import "./navbar.scss";
 import Logo from "../image/Logo.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMapMarked, faShoppingCart } from "@fortawesome/free-solid-svg-icons";
 import { MyContext } from "../Context/context";
+import Profile from "../Profile/Profile";
 
 export default function Navbar() {
-  const { cart, setCountItem, countItem, classesNameIcon } =
+  const { cart, setCountItem, countItem, classesNameIcon, myUser, setMyUser } =
     useContext(MyContext);
   if (cart) {
     let sum = cart.map((a) => a.counter);
@@ -22,29 +23,36 @@ export default function Navbar() {
 
   return (
     <div className="Navbar">
-      <ul>
-        <Link to="/">
+      <ul className="nav">
+        <NavLink to="/" className="logo" activeclassname="active">
+          <h4>Nuke </h4>
           <img src={Logo} alt="img" width="50" />
-        </Link>
-
+          <h4>Coffee</h4>
+        </NavLink>
         <li>
-          <Link to="/menu">MENU</Link>
+          <NavLink activeclassname="active" to="/menu">
+            MENU
+          </NavLink>
         </li>
         <li>
-          <Link to="/about">ABOUT US</Link>
+          <NavLink activeclassname="active" to="/about">
+            ABOUT US
+          </NavLink>
         </li>
         <li>
-          <Link to="/contact">CONTACT US</Link>
+          <NavLink activeclassname="active" to="/contact">
+            CONTACT US
+          </NavLink>
         </li>
       </ul>
+
       <ul>
         <li>
-          <Link to="/find">
+          <NavLink activeclassname="active" to="/find">
             <FontAwesomeIcon icon={faMapMarked} />
             <span> Find a Store</span>
-          </Link>
+          </NavLink>
         </li>
-
         <li className={`basketIcon ${classesNameIcon}`}>
           <span>{countItem}</span>
           <Link to="/cart">
@@ -54,12 +62,29 @@ export default function Navbar() {
             />
           </Link>
         </li>
-        <Link to="/sign">
-          <button>Sign in</button>
-        </Link>
-        <Link to="/join">
-          <button className="Join">Join now</button>
-        </Link>
+        {myUser ? (
+          <button
+            onClick={() => {
+              localStorage.clear();
+              setMyUser(null);
+            }}
+          >
+            Sign Out
+          </button>
+        ) : (
+          <Link to="/sign">
+            <button>Sign in</button>
+          </Link>
+        )}
+        {myUser ? (
+          <Link to="/profile">
+            <button className="Join">Profile</button>
+          </Link>
+        ) : (
+          <Link to="/join">
+            <button className="Join">Join now</button>
+          </Link>
+        )}
       </ul>
     </div>
   );

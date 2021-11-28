@@ -33,13 +33,27 @@
     height: 90%;
   }
   button {
-    padding: 20px 80px;
-    font-size: 1.5rem;
-    margin-top: 40px;
-    border-radius: 20px;
-    background-color: rgb(236, 57, 57);
+    background-image: linear-gradient(
+      to right,
+      #3a3535 0%,
+      #f10f0f 51%,
+      #4b4247 100%
+    );
+
+    margin: 10px;
+    padding: 30px 65px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white;
+    box-shadow: 0 0 20px #eee;
+    border-radius: 10px;
+
     &:hover {
-      background-color: rgba(0, 128, 0, 0.527);
+      background-position: right center;
+      color: #fff;
+      text-decoration: none;
     }
   }
 }

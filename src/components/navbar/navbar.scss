@@ -14,6 +14,22 @@
   background-color: rgb(255, 255, 255);
   box-shadow: 5px 5px 5px 5px rgb(22, 22, 22);
   height: 100px;
+
+  a:hover {
+    text-decoration: underline;
+  }
+  .logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+
+    h4 {
+      color: red;
+      margin: 0px 5px;
+    }
+  }
+
   .basketIcon {
     display: flex;
     flex-direction: column;
@@ -117,5 +133,29 @@ li {
   100% {
     -webkit-transform: scale3d(1, 1, 1);
     transform: scale3d(1, 1, 1);
+  }
+}
+.active {
+  background-image: linear-gradient(
+    to right,
+    #3a3535 0%,
+    #f10f0f 51%,
+    #4b4247 100%
+  );
+
+  margin: 10px;
+  padding: 10px 25px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: white;
+  box-shadow: 0 0 20px #eee;
+  border-radius: 10px;
+
+  &:hover {
+    background-position: right center;
+    color: #fff;
+    text-decoration: none;
   }
 }

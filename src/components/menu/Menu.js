@@ -1,4 +1,4 @@
-import React, { useContext, useEffect } from "react";
+import React, { useContext, useEffect, useState } from "react";
 
 import {
   faMinus,
@@ -10,10 +10,13 @@ import ReactCardFlip from "react-card-flip";
 
 import "./menu.scss";
 import { MyContext } from "../Context/context";
+// import { data } from "../../Data/data";
 export default function Menu() {
   let timeOut;
   const { cart, setCart, products, setProducts, setClassesNameIcon } =
     useContext(MyContext);
+
+  // const [products, setProducts] = useState(data);
   // ---------------------- is flipped function start here -----------------------------------
   const handleClick = (id) => {
     console.log(id);
@@ -81,14 +84,13 @@ export default function Menu() {
       // await setCountItem(counter);
     } else {
       setCart([...cart, itemInProduct]);
-      // setClassesNameIcon("jello-horizontal");
     }
   };
   useEffect(() => {
     return () => {
       clearTimeout(timeOut);
     };
-  }, []);
+  }, [timeOut]);
 
   // ------------------add to basket end here ------------------------------------
   return (

@@ -1,9 +1,11 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { useContext, useEffect } from "react";
+import { Link } from "react-router-dom";
 import { MyContext } from "../Context/context";
+import logo from "../image/Logo.png";
 import "./cart.scss";
 export default function Cart() {
-  const { cart, setCart } = useContext(MyContext);
-  const [totalPrice, setTotalPrice] = useState();
+  const { cart, setCart, totalPrice, setTotalPrice } = useContext(MyContext);
+
   const removeItem = (id) => {
     let updatedItem = cart.filter((item) => item.id !== id);
     setCart(updatedItem);
@@ -42,10 +44,15 @@ export default function Cart() {
             </div>
           );
         })}
-        <div className="checkDiv">
+        <div className="buyDiv">
+          <h4>Nuke Coffee</h4>
+          <img src={logo} alt="img logo" width="100px" />
           <span>Total price :</span>
           <h3>{totalPrice} $</h3>
-          <button className="btn-grad">Pay</button>
+
+          <Link to="/buy" className="btn-grad ">
+            Checkout
+          </Link>
         </div>
       </div>
     </>

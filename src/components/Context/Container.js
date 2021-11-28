@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { data } from "../data";
+import { data } from "../../Data/data";
 import { MyContext } from "./context";
 
 export default function Container(props) {
@@ -7,10 +7,14 @@ export default function Container(props) {
   const [countItem, setCountItem] = useState(0);
   const [products, setProducts] = useState(data);
   const [classesNameIcon, setClassesNameIcon] = useState("");
+  const [totalPrice, setTotalPrice] = useState();
+  const [myUser, setMyUser] = useState(null);
 
   return (
     <MyContext.Provider
       value={{
+        totalPrice,
+        setTotalPrice,
         cart,
         setCart,
         countItem,
@@ -19,6 +23,8 @@ export default function Container(props) {
         setProducts,
         setClassesNameIcon,
         classesNameIcon,
+        myUser,
+        setMyUser,
       }}
     >
       {props.children}
