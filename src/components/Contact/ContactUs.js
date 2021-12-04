@@ -21,7 +21,7 @@ export default function ContactUs() {
           className="fas fa-mail-bulk-contact"
         />
       </div>
-      <form>
+      <form className="contactForm">
         <h1>Contact Us</h1>
         <div className="info">
           <input

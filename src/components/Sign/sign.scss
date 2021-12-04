@@ -1,0 +1,47 @@
+.signDiv {
+  background-image: url(../image/footer.png);
+  background-repeat: no-repeat;
+  background-size: 100% 90%;
+  height: 95%;
+}
+.signForm {
+  width: 400px;
+  position: relative;
+  top: 20%;
+  left: 40%;
+
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.7);
+  box-shadow: 10px 10px 10px rgb(66, 63, 63);
+  // border-top: 1px rgb(128, 128, 128) solid;
+  &:hover {
+    background-color: rgb(160, 155, 155);
+    width: 600px;
+    cursor: pointer;
+    left: 35%;
+    h1,
+    label {
+      color: black;
+    }
+  }
+
+  h1 {
+    text-align: center;
+    padding: 15px;
+    color: blanchedalmond;
+  }
+  label {
+    margin: 0px;
+    color: blanchedalmond;
+  }
+}
+input {
+  width: calc(100% - 18px);
+  padding: 8px;
+  margin-bottom: 20px;
+  border: 1px solid #c91c1c;
+  outline: none;
+}
+input::placeholder {
+  color: #666;
+}

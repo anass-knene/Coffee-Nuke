@@ -173,12 +173,18 @@ export default function Buy() {
                     </div>
                   </div>
                 </div>
+                <div className="ShippingAddressDiv">
+                  <label>
+                    <input type="checkbox" checked="checked" name="sameadr" />
+                    Shipping address same as billing
+                  </label>
+                  <input
+                    type="submit"
+                    value="Continue to checkout"
+                    class="btn"
+                  />
+                </div>
               </div>
-              <label>
-                <input type="checkbox" checked="checked" name="sameadr" />
-                Shipping address same as billing
-              </label>
-              <input type="submit" value="Continue to checkout" class="btn" />
             </form>
           </div>
         </div>
@@ -186,7 +192,7 @@ export default function Buy() {
           <div className="container">
             <h4>
               Cart
-              <span className="price" style={{ color: "black" }}>
+              <span className="price">
                 <FontAwesomeIcon
                   icon={faShoppingCart}
                   className="fa fa-shopping-cart"
@@ -206,7 +212,7 @@ export default function Buy() {
             <hr />
             <div className="total">
               <p>Total </p>
-              <span style={{ color: "black" }}>${totalPrice}</span>
+              <span className="price">${totalPrice}</span>
             </div>
           </div>
         </div>

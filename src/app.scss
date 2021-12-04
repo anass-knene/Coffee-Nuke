@@ -3,10 +3,15 @@
   margin: 0;
   box-sizing: border-box;
 }
+html,
+body {
+  height: 100%;
+}
 .App {
   position: relative;
+  height: 88vh;
+
   .Nav {
-    background-color: red;
-    padding-bottom: 115px;
+    padding-bottom: 108px;
   }
 }

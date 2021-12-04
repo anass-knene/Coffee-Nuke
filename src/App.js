@@ -34,8 +34,8 @@ function App() {
           <Route path="/buy" element={<Buy />} />
           <Route path="/profile" element={<Profile />} />
         </Routes>
-        <Footer />
       </div>
+      <Footer />
     </Container>
   );
 }

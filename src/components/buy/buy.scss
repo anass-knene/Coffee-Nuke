@@ -7,23 +7,27 @@
 .row {
   display: -ms-flexbox;
   display: flex;
+
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  margin: 0px 16px;
+  margin: 10px 16px;
 }
 
 .col-25 {
   -ms-flex: 25%;
+
   flex: 25%;
 }
 
 .col-50 {
   -ms-flex: 50%;
+
   flex: 50%;
 }
 
 .col-75 {
   -ms-flex: 75%;
+
   flex: 75%;
 }
 
@@ -34,15 +38,19 @@
 }
 
 .container {
-  background-color: #f2f2f2;
-  padding: 5px 20px 15px 20px;
-  border: 1px solid lightgrey;
+  background-color: #7c7c7cef;
+  padding: 5px 20px 10px 20px;
+  border-top: 2px solid rgb(189, 53, 53);
+  border-right: 2px solid rgb(189, 53, 53);
   border-radius: 3px;
+  box-shadow: 10px 0px 20px black;
   form {
     margin: 0;
+    width: 100%;
   }
   h4 {
     margin: 5px;
+    color: white;
   }
   h3 {
     margin: 10px 0px 30px;
@@ -51,7 +59,7 @@
     width: 100%;
     margin-bottom: 20px;
     padding: 12px;
-    border: 1px solid #ccc;
+    border: 1px solid rgb(0, 0, 0);
     border-radius: 3px;
   }
   label {
@@ -64,11 +72,17 @@
   margin-bottom: 20px;
   padding: 7px 0;
   font-size: 24px;
+
   .fa {
     margin-left: 10px;
   }
 }
-
+.ShippingAddressDiv {
+  margin: 0px auto;
+  display: flex;
+  justify-content: space-around;
+  width: 70%;
+}
 .btn {
   background-image: linear-gradient(
     to right,
@@ -80,14 +94,14 @@
   padding: 12px;
   margin: 10px 0;
   border: none;
-  width: 100%;
+  width: 60%;
   border-radius: 3px;
   cursor: pointer;
   font-size: 17px;
 }
 
 hr {
-  border: 1px solid lightgrey;
+  border: 1px solid rgba(0, 0, 0, 0.315);
 }
 .itemPuy {
   border: 1px solid black;
@@ -110,7 +124,6 @@ hr {
 }
 span.price {
   float: right;
-  color: grey;
 }
 .total {
   display: flex;

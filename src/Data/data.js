@@ -252,3 +252,212 @@ export const data = [
       "https://www.starbucks.co.th/stb-media/2020/08/62.Nitro-Black-Tea-Lemonade1080-600x600.png",
   },
 ];
+export const slideData = [
+  {
+    price: 15.0,
+    id: 22,
+    counter: 0,
+    title: "NUKE COFFEE Bag With Whole Beans 12 Oz + Spon",
+    description: "Arabica and Robusta Bag with Nuke Coffee Spon",
+    Caffeine_Content: "Caffeinated",
+    Roast_Level: "Dark_roast",
+    made_from:
+      "Most Delicious Coffee Beans In The World Gathered From The HeartOf Sumatra Volcanic Mountains",
+    image: "../components/image/spoon.jpeg",
+    // image: "spoon",
+  },
+  {
+    price: 22.0,
+    id: 23,
+    counter: 0,
+    title: "NUKE COFFEE Box Whole Beans 16 Oz",
+    description: "Arabica and Robusta Coffee Box",
+    Caffeine_Content: "Caffeinated",
+    Roast_Level: "Medium_roast",
+    made_from:
+      "Most Delicious Coffee Beans In The World Gathered From The HeartOf Sumatra Volcanic Mountains",
+    image: "../components/image/Box_450_g.jpeg",
+    // image: "Box_450_g",
+  },
+  {
+    price: 25.0,
+    id: 24,
+    counter: 0,
+    title: "NUKE COFFEE Box With Whole Beans 16 Oz + Mug",
+    description: "Arabica and Robusta Coffee Box with Nuke Coffee Mug",
+    Caffeine_Content: "Caffeinated",
+    Roast_Level: "Dark_roast",
+    made_from:
+      "Most Delicious Coffee Beans In The World Gathered From The HeartOf Sumatra Volcanic Mountains",
+    // image: "../components/image/glasss.jpeg",
+    image: "glasss",
+  },
+  {
+    price: 20.0,
+    id: 25,
+    counter: 0,
+    title: "NUKE COFFEE Box With  Whole Beans 16 Oz",
+    description: "Arabica and Robusta Coffee Bag",
+    Caffeine_Content: "Caffeinated",
+    Roast_Level: "Dark_roast",
+    made_from:
+      "Most Delicious Coffee Beans In The World Gathered From The HeartOf Sumatra Volcanic Mountains",
+    image: "../components/image/Box_450_g.jpeg",
+    // image: "Box_450_g",
+  },
+  {
+    price: 30.0,
+    id: 26,
+    counter: 0,
+    title: "NUKE COFFEE Box With  Whole Beans 16 Oz + Big and Small Mug",
+    description:
+      "Arabica and Robusta Coffee Bag with Big and Small Nuke Coffee Mug",
+    Caffeine_Content: "Caffeinated",
+    Roast_Level: "Dark_roast",
+    made_from:
+      "Most Delicious Coffee Beans In The World Gathered From The HeartOf Sumatra Volcanic Mountains",
+    image: "../components/image/box_s_m_Mug.jpeg",
+    // image: "box_s_m_Mug",
+  },
+  {
+    price: 1.5,
+    id: 27,
+    counter: 0,
+    title: "NUKE COFFEE Bean whole sale",
+
+    made_from:
+      "Most Delicious Coffee Beans In The World Gathered From The HeartOf Sumatra Volcanic Mountains",
+    image: "../components/image/Beans.jpeg",
+    // image: "Beans",
+  },
+];
+export const UnroastedBeans = [
+  {
+    price: 1.5,
+    id: 28,
+    counter: 0,
+    title: "Green Beans",
+    temp: "22 °C (72 °F)",
+
+    description:
+      "Green coffee as it arrives at the dock. The beans can be stored for approximately 12–18 months in a climate controlled environment before quality loss is noticeable.",
+
+    image:
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/75_degrees_green_coffee.png/100px-75_degrees_green_coffee.png",
+  },
+
+  {
+    price: 1.5,
+    id: 29,
+    counter: 0,
+    title: "Drying Phase",
+    temp: "165 °C (329 °F)",
+    description:
+      "During the drying phase the beans are undergoing an endothermic process until their moisture content is evaporated, noted as the yellowing phase.",
+    image:
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/330_degrees_drying_coffee.png/100px-330_degrees_drying_coffee.png",
+  },
+];
+export const LightRoast = [
+  {
+    price: 2.0,
+    id: 30,
+    counter: 0,
+    title: "Cinnamon Roas",
+    temp: "196 °C (385 °F)",
+
+    description:
+      "A very light roast level which is immediately at first crack. Sweetness is underdeveloped, with prominent toasted grain, grassy flavors, and sharp acidity prominent.",
+
+    image:
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/385_degrees_cinnamon_roast_coffee.png/100px-385_degrees_cinnamon_roast_coffee.png",
+  },
+
+  {
+    price: 2.0,
+    id: 31,
+    counter: 0,
+    title: "New England Roast",
+    temp: "205 °C (401 °F)",
+    description:
+      "Moderate light brown, but still mottled in appearance. A preferred roast for some specialty roasters, highlights origin characteristics as well as complex acidity.",
+    image:
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/400_degrees_new_england_roast_coffee.png/100px-400_degrees_new_england_roast_coffee.png",
+  },
+];
+export const MediumRoast = [
+  {
+    price: 2.5,
+    id: 32,
+    counter: 0,
+    title: "American Roast",
+    temp: "210 °C (410 °F)",
+
+    description:
+      "Medium light brown, developed during first crack. Acidity is slightly muted, but origin character is still preserved.",
+
+    image:
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/410_degrees_american_roast_coffee.png/100px-410_degrees_american_roast_coffee.png",
+  },
+
+  {
+    price: 2.5,
+    id: 33,
+    counter: 0,
+    title: "City Roast",
+    temp: "219 °C (426 °F)",
+    description:
+      "Medium brown, common for most specialty coffee. Good for tasting origin character, although roast character is noticeable.",
+    image:
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/425_degrees_city_roast_coffee.png/100px-425_degrees_city_roast_coffee.png",
+  },
+];
+export const DarkRoast = [
+  {
+    price: 3.0,
+    id: 34,
+    counter: 0,
+    title: " Full City Roast",
+    temp: "225 °C (437 °F)",
+
+    description:
+      "Medium-dark brown with dry to tiny droplets or faint patches of oil, roast character is prominent. At the beginning of second crack, body is fully developed.",
+
+    image:
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/440_degrees_full_city_roast_coffee.png/100px-440_degrees_full_city_roast_coffee.png",
+  },
+
+  {
+    price: 3.0,
+    id: 35,
+    counter: 0,
+    title: " Vienna Roast",
+    temp: "230 °C (446 °F)",
+    description:
+      "Moderate dark brown with light surface oil, more bittersweet, caramel flavor, acidity muted. In the middle of second crack. Any origin characteristics have become eclipsed by roast at this level.",
+    image:
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/450_degrees_vienna_roast_coffee.png/100px-450_degrees_vienna_roast_coffee.png",
+  },
+  {
+    price: 3.0,
+    id: 36,
+    counter: 0,
+    title: "Italian Roast",
+    temp: "	245 °C (473 °F)",
+    description:
+      "Nearly black and shiny, burnt tones become more distinct, acidity nearly eliminated, thin body.",
+    image:
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/470_degrees_italian_roast_coffee.png/100px-470_degrees_italian_roast_coffee.png",
+  },
+  {
+    price: 3.0,
+    id: 37,
+    counter: 0,
+    title: "French Roast",
+    temp: "	240 °C (464 °F)",
+    description:
+      "Dark brown, shiny with oil, deep caramel undertones, acidity diminished. At the end of second crack. Roast character is dominant, little of the inherent aroma or flavors of the coffee remain.",
+    image:
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/460_degrees_french_roast_coffee.png/100px-460_degrees_french_roast_coffee.png",
+  },
+];

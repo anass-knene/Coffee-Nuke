@@ -1,9 +1,10 @@
 import React, { useContext, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { MyContext } from "../Context/context";
 import "./join.scss";
 
 export default function Join() {
+  const navigate = useNavigate();
   const { setMyUser } = useContext(MyContext);
   const JoinUser = (e) => {
     e.preventDefault();
@@ -20,7 +21,7 @@ export default function Join() {
     ) {
       setMyUser(user);
       localStorage.setItem("user", JSON.stringify(user));
-      <Link to="/profile" />;
+      navigate("/profile");
     } else {
       alert("check your Form something wrong ");
     }
@@ -36,7 +37,7 @@ export default function Join() {
   }, []);
   return (
     <div className="joinContainer">
-      <form onSubmit={JoinUser}>
+      <form className="joinForm" onSubmit={JoinUser}>
         <h1>Join Us</h1>
         <div className="info">
           <label>Full Name</label>
@@ -55,14 +56,13 @@ export default function Join() {
           <label>Re Password</label>
           <input type="password" name="re_Password" placeholder="" />
         </div>
-        {/* <Link to="/profile"> */}
+
         <input
           className="BtnContact"
           name="submit"
           type="submit"
           value="Submit"
         />
-        {/* </Link> */}
       </form>
     </div>
   );
